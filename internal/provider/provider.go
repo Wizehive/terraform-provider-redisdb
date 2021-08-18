@@ -48,9 +48,11 @@ func New(version string) func() *schema.Provider {
 			},
 			ResourcesMap: map[string]*schema.Resource{
 				"redisdb_hash": resourceHash(),
+				"redisdb_key": resourceKey(),
 			},
 			DataSourcesMap: map[string]*schema.Resource{
 				"redisdb_hash": dataSourceHash(),
+				"redisdb_key": dataSourceHash(),
 			},
 			ConfigureContextFunc: providerConfigure,
 		}
